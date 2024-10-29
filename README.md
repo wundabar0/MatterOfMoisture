@@ -2,6 +2,7 @@
 
 _By Brendan Henrich, Senior FAE at Symmetry Electronics_
 
+![title_small](https://github.com/user-attachments/assets/e04dba80-f651-444e-851e-18cb8fb5c3dc)
 
 Ever wondered if your plants secretly judge you for forgetting to water them? Fear not! With the power of the sun and the versatility of the Arduino Matter Nano, you can create a solar-powered moisture sensor that keeps your plants—and your conscience—well-hydrated. Plus, it integrates seamlessly with the Apple Home ecosystem, changing the color of your Nanoleaf Matter light bulb based on soil moisture levels.
 
@@ -37,6 +38,8 @@ The Adafruit STEMMA Soil Moisture Sensor communicates via I2C, making it easy to
 - Soil Sensor GND → Arduino GND
 - Soil Sensor SDA → Arduino A4 (SDA)
 - Soil Sensor SCL → Arduino A5 (SCL)
+  
+![diagram](https://github.com/user-attachments/assets/b7943d0a-00cd-47bd-9d45-e71b9676dc92)
 
 For more details on the sensor, check out the [Adafruit STEMMA Soil Sensor guide](https://www.adafruit.com/).
 
@@ -52,6 +55,8 @@ Taking inspiration from our plants, we're using solar power. The Solar Power Man
 ## Programming the Arduino Nano
 
 Start by opening the `matter_humidity_sensor` example in the Arduino IDE, found under Matter examples.
+
+![examples](https://github.com/user-attachments/assets/02a971f4-492d-4b05-933e-52387f34cd95)
 
 ### Adding the Adafruit Seesaw Library
 
@@ -111,8 +116,12 @@ To make your moisture sensor communicate with the Apple Home ecosystem and contr
 
 1. **Commission the Device**: Follow the user guide to commission the device onto your Matter network.
 2. **Onboarding QR Code**: Use the provided QR code for onboarding.
-
+   
+![qr](https://github.com/user-attachments/assets/19d1d16e-caef-4202-8a67-d0a49b7114c3)
 > **Note**: All Arduino Matter Nano boards produce the same QR code. For unique QR codes per device, consider using Silicon Labs' Provisioning tools with Simplicity Studio.
+
+![comish](https://github.com/user-attachments/assets/6251aedb-8072-42af-a27c-d792a9d3579b)
+![done](https://github.com/user-attachments/assets/2726b502-3076-4de0-8638-8a5a97eb3e74)
 
 ### Nanoleaf Matter Light Bulb
 
@@ -127,6 +136,9 @@ With the device added to Apple Home, you can create automations to change the co
 2. **Create New Automation**: Select "A Sensor Detects Something".
 3. **Choose Your Moisture Sensor**: Set conditions based on moisture levels.
 4. **Select Actions**: Choose the Nanoleaf light bulb and set the desired color.
+
+![auto1](https://github.com/user-attachments/assets/5c79c406-51de-4628-b989-ae57ae76473d)
+![auto2](https://github.com/user-attachments/assets/dc38fdb8-56fc-4cba-b47c-960acc489b9c)
 
 ### Plant-Specific Moisture Levels
 
